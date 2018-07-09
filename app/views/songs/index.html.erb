@@ -1,8 +1,17 @@
+<div class="title">
 <h1> All Songs </h1>
-
 <p><%= link_to  "Add New Song", new_song_path %></p>
+</div>
+</br>
 
 <% @songs.each do |song| %>
-  <h2><%=song.title %></h2>
-  <p>Plays: <%=song.play_count%></p>
+<div class="list-items">
+  <ul>
+    <div>
+    <li><h2><%= song.artist.name %></h2></li>
+   <li><h3><%=song.title %></h3></li>
+   <li><p>Plays: <%=song.play_count%></p></li>
+  </div>
+  </ul>
+</div>
 <%end%>

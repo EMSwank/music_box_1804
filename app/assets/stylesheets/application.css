@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+body {
+  background-color: #EAFEF3
+}
+
+.title {
+  width: 100%;
+  font-family: cursive;
+  text-align: center;
+}
+
+.title p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center
+}
+
