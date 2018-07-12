@@ -15,6 +15,7 @@ describe "User can create a new song" do
 
     click_on 'Create Song'
 
+    expect(current_path).to eq(songs_path)
     expect(page).to have_content(song_title)
   end
 end
