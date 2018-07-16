@@ -17,6 +17,10 @@ class ArtistsController < ApplicationController
     end
   end
 
+  def show
+    @artist = Artist.find(params[:id])
+    # cookies[:secret] = "It's a secret to everybody"
+  end
   private
 
     def artist_params

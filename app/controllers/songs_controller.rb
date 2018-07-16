@@ -19,6 +19,11 @@ class SongsController < ApplicationController
     end
   end
 
+  def show
+    @artist = Artist.find(params[:artist_id])
+    @song = Song.find(params[:id])
+  end
+
   private
     def song_params
       params.require(:song).permit(:title, :length, :play_count)
