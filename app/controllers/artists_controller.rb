@@ -9,13 +9,18 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    if Artist.create(artist_params)
+    @artist = Artist.create(artist_params)
+    if @artist.save
       redirect_to '/artists'
     else
-      redirect_to '/artists/new'
+      render :new
     end
   end
 
+  def show
+    @artist = Artist.find(params[:id])
+    # cookies[:secret] = "It's a secret to everybody"
+  end
   private
 
     def artist_params
